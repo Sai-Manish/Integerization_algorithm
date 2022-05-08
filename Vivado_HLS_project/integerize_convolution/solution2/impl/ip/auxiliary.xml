@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="top_module" xd:componentRef="top_module" xd:initiationInterval="1491722" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:returnValue xd:interfaceRef="ap_return" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="alpha_kernel" xd:originalName="alpha_kernel" xd:direction="in" xd:interfaceRef="alpha_kernel" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="output_r_d0" xd:originalName="output_r_d0" xd:direction="out" xd:interfaceRef="output_r_d0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="8"/>
+  <xd:arg xd:name="input_r_q0" xd:originalName="input_r_q0" xd:direction="in" xd:interfaceRef="input_r_q0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="8"/>
+  <xd:arg xd:name="kernel_V_q0" xd:originalName="kernel_V_q0" xd:direction="in" xd:interfaceRef="kernel_V_q0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="4"/>
+  <xd:latencyEstimates xd:best-case="1491721" xd:worst-case="1491721" xd:average-case="1491721"/>
+  <xd:resourceEstimates xd:LUT="1180" xd:FF="768" xd:BRAM="0" xd:DSP="4"/>
+</xd:acceleratorMap>

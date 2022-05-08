@@ -1,0 +1,349 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Code/intergerize_convolution.cpp' ... 
+WARNING: [HLS 200-40] In file included from Code/intergerize_convolution.cpp:1:
+In file included from Code/integerize_convolution.h:14:
+F:/Vivado/Vivado/2019.1/common/technology/autopilot\hls_opencv.h:300:2: error: hls_opencv.h is not intended to be included in design source files, please include hls_opencv.h only in design testbench.
+#error hls_opencv.h is not intended to be included in design source files, please include hls_opencv.h only in design testbench.
+ ^
+1 error generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Code/intergerize_convolution.cpp' ... 
+WARNING: [HLS 200-40] In file included from Code/intergerize_convolution.cpp:1:
+In file included from Code/integerize_convolution.h:14:
+F:/Vivado/Vivado/2019.1/common/technology/autopilot\hls_opencv.h:300:2: error: hls_opencv.h is not intended to be included in design source files, please include hls_opencv.h only in design testbench.
+#error hls_opencv.h is not intended to be included in design source files, please include hls_opencv.h only in design testbench.
+ ^
+1 error generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Code/intergerize_convolution.cpp' ... 
+WARNING: [HLS 200-40] In file included from Code/intergerize_convolution.cpp:1:
+In file included from Code/integerize_convolution.h:14:
+F:/Vivado/Vivado/2019.1/common/technology/autopilot\hls_opencv.h:300:2: error: hls_opencv.h is not intended to be included in design source files, please include hls_opencv.h only in design testbench.
+#error hls_opencv.h is not intended to be included in design source files, please include hls_opencv.h only in design testbench.
+ ^
+1 error generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Code/intergerize_convolution.cpp' ... 
+WARNING: [HLS 200-40] In file included from Code/intergerize_convolution.cpp:1:
+In file included from Code/integerize_convolution.h:14:
+F:/Vivado/Vivado/2019.1/common/technology/autopilot\hls_opencv.h:300:2: error: hls_opencv.h is not intended to be included in design source files, please include hls_opencv.h only in design testbench.
+#error hls_opencv.h is not intended to be included in design source files, please include hls_opencv.h only in design testbench.
+ ^
+1 error generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Code/intergerize_convolution.cpp' ... 
+WARNING: [HLS 200-40] In file included from Code/intergerize_convolution.cpp:1:
+In file included from Code/integerize_convolution.h:14:
+F:/Vivado/Vivado/2019.1/common/technology/autopilot\hls_opencv.h:300:2: error: hls_opencv.h is not intended to be included in design source files, please include hls_opencv.h only in design testbench.
+#error hls_opencv.h is not intended to be included in design source files, please include hls_opencv.h only in design testbench.
+ ^
+1 error generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Code/intergerize_convolution.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from Code/intergerize_convolution.cpp:1:
+In file included from Code/intergerize_convolution.cpp:1:
+Code/integerize_convolution.h:32:17: error: expected namespace name
+using namespace cv;
+                ^
+1 error generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Code/intergerize_convolution.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:45 . Memory (MB): peak = 175.598 ; gain = 85.086
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:45 . Memory (MB): peak = 175.598 ; gain = 85.086
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:00:54 . Memory (MB): peak = 181.996 ; gain = 91.484
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:68) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:91) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<unsigned char, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned char, float>' into '__hls_fptoui_float_i8' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptoui_float_i8' into 'top_module' (Code/intergerize_convolution.cpp:32) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:05 ; elapsed = 00:00:56 . Memory (MB): peak = 216.145 ; gain = 125.633
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' (Code/intergerize_convolution.cpp:13) in function 'top_module' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (Code/intergerize_convolution.cpp:20) in function 'top_module' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1' (Code/intergerize_convolution.cpp:22) in function 'top_module' completely with a factor of 5.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:68) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<unsigned char, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned char, float>' into '__hls_fptoui_float_i8' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptoui_float_i8' into 'top_module' (Code/intergerize_convolution.cpp:32) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'top_module' (Code/intergerize_convolution.cpp:3)...24 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:00:58 . Memory (MB): peak = 278.309 ; gain = 187.797
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (Code/intergerize_convolution.cpp:11:7) in function 'top_module'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:00:59 . Memory (MB): peak = 292.199 ; gain = 201.688
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'top_module' ...
+WARNING: [SYN 201-107] Renaming port name 'top_module/output' to 'top_module/output_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'top_module/input' to 'top_module/input_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'top_module' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('input_load_2', Code/intergerize_convolution.cpp:26) on array 'input_r' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'input_r'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 13, Depth = 27.
+WARNING: [SCHED 204-21] Estimated clock period (11ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'top_module' consists of the following:
+	'mul' operation of DSP[299] ('mul_ln1352_1', Code/intergerize_convolution.cpp:26) [111]  (3.36 ns)
+	'add' operation of DSP[299] ('add_ln26', Code/intergerize_convolution.cpp:26) [299]  (3.82 ns)
+	'add' operation of DSP[301] ('add_ln26_1', Code/intergerize_convolution.cpp:26) [301]  (3.82 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 60.329 seconds; current allocated memory: 224.496 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.91 seconds; current allocated memory: 225.575 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'top_module' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_module/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_module/input_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_module/kernel_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_module/alpha_kernel' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'top_module' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'top_module_fmul_32ns_32ns_32_4_max_dsp_1' to 'top_module_fmul_3bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_module_sitofp_32s_32_6_1' to 'top_module_sitofpcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_module_mac_muladd_4s_8ns_13s_14_1_1' to 'top_module_mac_mudEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_module_mac_muladd_4s_8ns_12s_13_1_1' to 'top_module_mac_mueOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'top_module_fmul_3bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_module_mac_mudEe': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_module_mac_mueOg': 9 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_module_sitofpcud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'top_module'.
+INFO: [HLS 200-111]  Elapsed time: 1.042 seconds; current allocated memory: 227.774 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:12 ; elapsed = 00:01:08 . Memory (MB): peak = 297.969 ; gain = 207.457
+INFO: [VHDL 208-304] Generating VHDL RTL for top_module.
+INFO: [VLOG 209-307] Generating Verilog RTL for top_module.
+INFO: [HLS 200-112] Total elapsed time: 68.69 seconds; peak allocated memory: 227.774 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [IMPL 213-8] Starting RTL evaluation using Vivado ...
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Code/intergerize_convolution.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:43 . Memory (MB): peak = 175.062 ; gain = 83.531
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:43 . Memory (MB): peak = 175.062 ; gain = 83.531
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:00:49 . Memory (MB): peak = 180.227 ; gain = 88.695
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:68) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:91) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<unsigned char, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned char, float>' into '__hls_fptoui_float_i8' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptoui_float_i8' into 'top_module' (Code/intergerize_convolution.cpp:32) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:05 ; elapsed = 00:00:50 . Memory (MB): peak = 215.816 ; gain = 124.285
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:68) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<unsigned char, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned char, float>' into '__hls_fptoui_float_i8' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptoui_float_i8' into 'top_module' (Code/intergerize_convolution.cpp:32) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:00:53 . Memory (MB): peak = 277.832 ; gain = 186.301
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:00:54 . Memory (MB): peak = 290.746 ; gain = 199.215
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'top_module' ...
+WARNING: [SYN 201-107] Renaming port name 'top_module/output' to 'top_module/output_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'top_module/input' to 'top_module/input_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'top_module' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 54.827 seconds; current allocated memory: 221.777 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 4 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.408 seconds; current allocated memory: 222.267 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'top_module' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_module/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_module/input_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_module/kernel_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_module/alpha_kernel' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'top_module' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'top_module_fmul_32ns_32ns_32_4_max_dsp_1' to 'top_module_fmul_3bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_module_sitofp_32ns_32_6_1' to 'top_module_sitofpcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_module_mac_muladd_4s_8ns_32ns_32_1_1' to 'top_module_mac_mudEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'top_module_fmul_3bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_module_mac_mudEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_module_sitofpcud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'top_module'.
+INFO: [HLS 200-111]  Elapsed time: 0.639 seconds; current allocated memory: 222.958 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:10 ; elapsed = 00:01:00 . Memory (MB): peak = 301.996 ; gain = 210.465
+INFO: [VHDL 208-304] Generating VHDL RTL for top_module.
+INFO: [VLOG 209-307] Generating Verilog RTL for top_module.
+INFO: [HLS 200-112] Total elapsed time: 60.038 seconds; peak allocated memory: 222.958 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [IMPL 213-8] Starting RTL evaluation using Vivado ...
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Code/intergerize_convolution.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:35 . Memory (MB): peak = 175.812 ; gain = 84.148
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:35 . Memory (MB): peak = 175.812 ; gain = 84.148
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:05 ; elapsed = 00:00:40 . Memory (MB): peak = 181.574 ; gain = 89.910
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:68) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:91) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<unsigned char, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned char, float>' into '__hls_fptoui_float_i8' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptoui_float_i8' into 'top_module' (Code/intergerize_convolution.cpp:32) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:06 ; elapsed = 00:00:41 . Memory (MB): peak = 217.652 ; gain = 125.988
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:68) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<unsigned char, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned char, float>' into '__hls_fptoui_float_i8' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptoui_float_i8' into 'top_module' (Code/intergerize_convolution.cpp:32) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:00:42 . Memory (MB): peak = 277.945 ; gain = 186.281
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:00:43 . Memory (MB): peak = 291.582 ; gain = 199.918
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'top_module' ...
+WARNING: [SYN 201-107] Renaming port name 'top_module/output' to 'top_module/output_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'top_module/input' to 'top_module/input_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'top_module' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 43.927 seconds; current allocated memory: 221.778 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 4 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.452 seconds; current allocated memory: 222.268 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'top_module' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_module/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_module/input_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_module/kernel_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_module/alpha_kernel' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'top_module' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'top_module_fmul_32ns_32ns_32_4_max_dsp_1' to 'top_module_fmul_3bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_module_sitofp_32ns_32_6_1' to 'top_module_sitofpcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_module_mac_muladd_4s_8ns_32ns_32_1_1' to 'top_module_mac_mudEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'top_module_fmul_3bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_module_mac_mudEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_module_sitofpcud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'top_module'.
+INFO: [HLS 200-111]  Elapsed time: 0.349 seconds; current allocated memory: 222.959 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:11 ; elapsed = 00:00:49 . Memory (MB): peak = 302.254 ; gain = 210.590
+INFO: [VHDL 208-304] Generating VHDL RTL for top_module.
+INFO: [VLOG 209-307] Generating Verilog RTL for top_module.
+INFO: [HLS 200-112] Total elapsed time: 48.755 seconds; peak allocated memory: 222.959 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [IMPL 213-8] Starting RTL evaluation using Vivado ...

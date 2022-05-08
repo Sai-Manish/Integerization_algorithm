@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="integerize_convolution.h" path="H:\SEM8\RE-MR\Code\integerize_convolution.h"/>
+    <originFiles name="intergerize_convolution.cpp" path="H:\SEM8\RE-MR\Code\intergerize_convolution.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="integerize_convolution_test.cpp" path="H:\SEM8\RE-MR\Code\integerize_convolution_test.cpp"/>
+    <originFiles name="test_image.png" path="C:\Users\saima.LAPTOP-63J97F6G\Downloads\test_image.png"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

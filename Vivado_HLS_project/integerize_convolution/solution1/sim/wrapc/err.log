@@ -1,0 +1,28 @@
+In file included from F:/Vivado/Vivado/2019.1/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
+                 from F:/Vivado/Vivado/2019.1/include/hls_fpo.h:186,
+                 from F:/Vivado/Vivado/2019.1/include/hls_half.h:44,
+                 from F:/Vivado/Vivado/2019.1/include/etc/ap_private.h:90,
+                 from F:/Vivado/Vivado/2019.1/include/ap_common.h:641,
+                 from F:/Vivado/Vivado/2019.1/include/ap_int.h:54,
+                 from apatb_top_module.cpp:14:
+F:/Vivado/Vivado/2019.1/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from F:/Vivado/Vivado/2019.1/include/hls_fpo.h:186:0,
+                 from F:/Vivado/Vivado/2019.1/include/hls_half.h:44,
+                 from F:/Vivado/Vivado/2019.1/include/etc/ap_private.h:90,
+                 from F:/Vivado/Vivado/2019.1/include/ap_common.h:641,
+                 from F:/Vivado/Vivado/2019.1/include/ap_int.h:54,
+                 from apatb_top_module.cpp:14:
+F:/Vivado/Vivado/2019.1/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+H:/SEM8/RE-MR/Code/integerize_convolution_test.cpp: In function 'int main(int, char**)':
+H:/SEM8/RE-MR/Code/integerize_convolution_test.cpp:62:44: error: invalid initialization of reference of type 'unsigned char (&)[508][508]' from expression of type 'cv::Mat'
+     top_module(output, in_img, kernel,alpha);
+                                            ^
+In file included from H:/SEM8/RE-MR/Code/integerize_convolution_test.cpp:21:0:
+H:/SEM8/RE-MR/Code/integerize_convolution.h:31:5: note: in passing argument 1 of 'int top_module(unsigned char (&)[508][508], unsigned char (&)[512][512], int4_t (&)[5][5], float)'
+ int top_module(unsigned char (&output)[508][508], unsigned char (&input)[512][512], int4_t (&kernel)[5][5], float alpha_kernel);
+     ^~~~~~~~~~
+make: *** [obj/integerize_convolution_test.cpp_pre.cpp.tb.o] Error 1

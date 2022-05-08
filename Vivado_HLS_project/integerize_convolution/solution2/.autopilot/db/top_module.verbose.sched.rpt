@@ -1,0 +1,358 @@
+
+
+================================================================
+== Vivado HLS Report for 'top_module'
+================================================================
+* Date:           Wed Apr 27 12:06:20 2022
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        integerize_convolution
+* Solution:       solution2
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.429|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +---------+---------+---------+---------+---------+
+    |      Latency      |      Interval     | Pipeline|
+    |   min   |   max   |   min   |   max   |   Type  |
+    +---------+---------+---------+---------+---------+
+    |  1491721|  1491721|  1491721|  1491721|   none  |
+    +---------+---------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                     |      Latency      | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1             |  1491720|  1491720|     12030|          -|          -|   124|    no    |
+        | + Loop 1.1          |    12028|    12028|        97|          -|          -|   124|    no    |
+        |  ++ Loop 1.1.1      |       85|       85|        17|          -|          -|     5|    no    |
+        |   +++ Loop 1.1.1.1  |       15|       15|         3|          -|          -|     5|    no    |
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 17
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 2 
+4 --> 8 5 
+5 --> 6 4 
+6 --> 7 
+7 --> 5 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 3 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.66>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15376 x i8]* %output_r), !map !42"   --->   Operation 18 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([16384 x i8]* %input_r), !map !48"   --->   Operation 19 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([25 x i4]* %kernel_V), !map !54"   --->   Operation 20 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float %alpha_kernel), !map !60"   --->   Operation 21 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !66"   --->   Operation 22 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @top_module_str) nounwind"   --->   Operation 23 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%alpha_kernel_read = call float @_ssdm_op_Read.ap_auto.float(float %alpha_kernel)" [Code/intergerize_convolution.cpp:3]   --->   Operation 24 'read' 'alpha_kernel_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (1.66ns)   --->   "br label %.loopexit" [Code/intergerize_convolution.cpp:11]   --->   Operation 25 'br' <Predicate = true> <Delay = 1.66>
+
+State 2 <SV = 1> <Delay = 2.13>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%x = phi i7 [ 0, %0 ], [ %i, %.loopexit.loopexit ]"   --->   Operation 26 'phi' 'x' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%zext_ln16 = zext i7 %x to i8" [Code/intergerize_convolution.cpp:16]   --->   Operation 27 'zext' 'zext_ln16' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (1.46ns)   --->   "%icmp_ln11 = icmp eq i7 %x, -4" [Code/intergerize_convolution.cpp:11]   --->   Operation 28 'icmp' 'icmp_ln11' <Predicate = true> <Delay = 1.46> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 124, i64 124, i64 124)"   --->   Operation 29 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (2.03ns)   --->   "%i = add i7 %x, 1" [Code/intergerize_convolution.cpp:11]   --->   Operation 30 'add' 'i' <Predicate = true> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "br i1 %icmp_ln11, label %4, label %.preheader39.preheader" [Code/intergerize_convolution.cpp:11]   --->   Operation 31 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%tmp_1 = call i14 @_ssdm_op_BitConcatenate.i14.i7.i7(i7 %x, i7 0)" [Code/intergerize_convolution.cpp:32]   --->   Operation 32 'bitconcatenate' 'tmp_1' <Predicate = (!icmp_ln11)> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%zext_ln32 = zext i14 %tmp_1 to i15" [Code/intergerize_convolution.cpp:32]   --->   Operation 33 'zext' 'zext_ln32' <Predicate = (!icmp_ln11)> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%tmp_2 = call i9 @_ssdm_op_BitConcatenate.i9.i7.i2(i7 %x, i2 0)" [Code/intergerize_convolution.cpp:32]   --->   Operation 34 'bitconcatenate' 'tmp_2' <Predicate = (!icmp_ln11)> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%zext_ln32_1 = zext i9 %tmp_2 to i15" [Code/intergerize_convolution.cpp:32]   --->   Operation 35 'zext' 'zext_ln32_1' <Predicate = (!icmp_ln11)> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (2.13ns)   --->   "%sub_ln32 = sub i15 %zext_ln32, %zext_ln32_1" [Code/intergerize_convolution.cpp:32]   --->   Operation 36 'sub' 'sub_ln32' <Predicate = (!icmp_ln11)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 37 [1/1] (1.66ns)   --->   "br label %.preheader39" [Code/intergerize_convolution.cpp:17]   --->   Operation 37 'br' <Predicate = (!icmp_ln11)> <Delay = 1.66>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "ret i32 0" [Code/intergerize_convolution.cpp:37]   --->   Operation 38 'ret' <Predicate = (icmp_ln11)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.03>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%y = phi i7 [ %j, %3 ], [ 0, %.preheader39.preheader ]"   --->   Operation 39 'phi' 'y' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%zext_ln17 = zext i7 %y to i8" [Code/intergerize_convolution.cpp:17]   --->   Operation 40 'zext' 'zext_ln17' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (1.46ns)   --->   "%icmp_ln13 = icmp eq i7 %y, -4" [Code/intergerize_convolution.cpp:13]   --->   Operation 41 'icmp' 'icmp_ln13' <Predicate = true> <Delay = 1.46> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%empty_6 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 124, i64 124, i64 124)"   --->   Operation 42 'speclooptripcount' 'empty_6' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (2.03ns)   --->   "%j = add i7 %y, 1" [Code/intergerize_convolution.cpp:13]   --->   Operation 43 'add' 'j' <Predicate = true> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "br i1 %icmp_ln13, label %.loopexit.loopexit, label %.preheader38.preheader" [Code/intergerize_convolution.cpp:13]   --->   Operation 44 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 45 [1/1] (1.66ns)   --->   "br label %.preheader38" [Code/intergerize_convolution.cpp:20]   --->   Operation 45 'br' <Predicate = (!icmp_ln13)> <Delay = 1.66>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 46 'br' <Predicate = (icmp_ln13)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 6.18>
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%convolute_2 = phi i32 [ %convolute_3, %2 ], [ 0, %.preheader38.preheader ]" [Code/intergerize_convolution.cpp:26]   --->   Operation 47 'phi' 'convolute_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%x_0 = phi i8 [ %x_1, %2 ], [ %zext_ln16, %.preheader38.preheader ]"   --->   Operation 48 'phi' 'x_0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 49 [1/1] (0.00ns)   --->   "%k_0 = phi i3 [ %k, %2 ], [ 0, %.preheader38.preheader ]"   --->   Operation 49 'phi' 'k_0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 50 [1/1] (1.18ns)   --->   "%icmp_ln20 = icmp eq i3 %k_0, -3" [Code/intergerize_convolution.cpp:20]   --->   Operation 50 'icmp' 'icmp_ln20' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 51 [1/1] (0.00ns)   --->   "%empty_7 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5)"   --->   Operation 51 'speclooptripcount' 'empty_7' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 52 [1/1] (1.68ns)   --->   "%k = add i3 %k_0, 1" [Code/intergerize_convolution.cpp:20]   --->   Operation 52 'add' 'k' <Predicate = true> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 53 [1/1] (0.00ns)   --->   "br i1 %icmp_ln20, label %3, label %.preheader.preheader" [Code/intergerize_convolution.cpp:20]   --->   Operation 53 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 54 [1/1] (0.00ns)   --->   "%zext_ln215 = zext i3 %k_0 to i6" [Code/intergerize_convolution.cpp:26]   --->   Operation 54 'zext' 'zext_ln215' <Predicate = (!icmp_ln20)> <Delay = 0.00>
+ST_4 : Operation 55 [1/1] (0.00ns)   --->   "%tmp_5 = call i5 @_ssdm_op_BitConcatenate.i5.i3.i2(i3 %k_0, i2 0)" [Code/intergerize_convolution.cpp:26]   --->   Operation 55 'bitconcatenate' 'tmp_5' <Predicate = (!icmp_ln20)> <Delay = 0.00>
+ST_4 : Operation 56 [1/1] (0.00ns)   --->   "%zext_ln215_1 = zext i5 %tmp_5 to i6" [Code/intergerize_convolution.cpp:26]   --->   Operation 56 'zext' 'zext_ln215_1' <Predicate = (!icmp_ln20)> <Delay = 0.00>
+ST_4 : Operation 57 [1/1] (1.86ns)   --->   "%add_ln215 = add i6 %zext_ln215, %zext_ln215_1" [Code/intergerize_convolution.cpp:26]   --->   Operation 57 'add' 'add_ln215' <Predicate = (!icmp_ln20)> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 58 [1/1] (0.00ns)   --->   "%tmp_6 = call i15 @_ssdm_op_BitConcatenate.i15.i8.i7(i8 %x_0, i7 0)" [Code/intergerize_convolution.cpp:26]   --->   Operation 58 'bitconcatenate' 'tmp_6' <Predicate = (!icmp_ln20)> <Delay = 0.00>
+ST_4 : Operation 59 [1/1] (0.00ns)   --->   "%zext_ln22 = zext i15 %tmp_6 to i16" [Code/intergerize_convolution.cpp:22]   --->   Operation 59 'zext' 'zext_ln22' <Predicate = (!icmp_ln20)> <Delay = 0.00>
+ST_4 : Operation 60 [1/1] (1.66ns)   --->   "br label %.preheader" [Code/intergerize_convolution.cpp:22]   --->   Operation 60 'br' <Predicate = (!icmp_ln20)> <Delay = 1.66>
+ST_4 : Operation 61 [6/6] (6.18ns)   --->   "%tmp = sitofp i32 %convolute_2 to float" [Code/intergerize_convolution.cpp:32]   --->   Operation 61 'sitofp' 'tmp' <Predicate = (icmp_ln20)> <Delay = 6.18> <Core = "Int2Float">   --->   Core 112 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.18> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 62 [1/1] (0.00ns)   --->   "%zext_ln32_2 = zext i7 %y to i15" [Code/intergerize_convolution.cpp:32]   --->   Operation 62 'zext' 'zext_ln32_2' <Predicate = (icmp_ln20)> <Delay = 0.00>
+ST_4 : Operation 63 [1/1] (2.14ns)   --->   "%add_ln32 = add i15 %zext_ln32_2, %sub_ln32" [Code/intergerize_convolution.cpp:32]   --->   Operation 63 'add' 'add_ln32' <Predicate = (icmp_ln20)> <Delay = 2.14> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 5.39>
+ST_5 : Operation 64 [1/1] (0.00ns)   --->   "%convolute_3 = phi i32 [ %convolute, %1 ], [ %convolute_2, %.preheader.preheader ]"   --->   Operation 64 'phi' 'convolute_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 65 [1/1] (0.00ns)   --->   "%y_1 = phi i8 [ %y_2, %1 ], [ %zext_ln17, %.preheader.preheader ]"   --->   Operation 65 'phi' 'y_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 66 [1/1] (0.00ns)   --->   "%l_0 = phi i3 [ %l, %1 ], [ 0, %.preheader.preheader ]"   --->   Operation 66 'phi' 'l_0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 67 [1/1] (1.18ns)   --->   "%icmp_ln22 = icmp eq i3 %l_0, -3" [Code/intergerize_convolution.cpp:22]   --->   Operation 67 'icmp' 'icmp_ln22' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 68 [1/1] (0.00ns)   --->   "%empty_8 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5)"   --->   Operation 68 'speclooptripcount' 'empty_8' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 69 [1/1] (1.68ns)   --->   "%l = add i3 %l_0, 1" [Code/intergerize_convolution.cpp:22]   --->   Operation 69 'add' 'l' <Predicate = true> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 70 [1/1] (0.00ns)   --->   "br i1 %icmp_ln22, label %2, label %1" [Code/intergerize_convolution.cpp:22]   --->   Operation 70 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 71 [1/1] (0.00ns)   --->   "%zext_ln215_2 = zext i3 %l_0 to i6" [Code/intergerize_convolution.cpp:26]   --->   Operation 71 'zext' 'zext_ln215_2' <Predicate = (!icmp_ln22)> <Delay = 0.00>
+ST_5 : Operation 72 [1/1] (1.94ns)   --->   "%add_ln215_1 = add i6 %add_ln215, %zext_ln215_2" [Code/intergerize_convolution.cpp:26]   --->   Operation 72 'add' 'add_ln215_1' <Predicate = (!icmp_ln22)> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 73 [1/1] (0.00ns)   --->   "%zext_ln215_3 = zext i6 %add_ln215_1 to i64" [Code/intergerize_convolution.cpp:26]   --->   Operation 73 'zext' 'zext_ln215_3' <Predicate = (!icmp_ln22)> <Delay = 0.00>
+ST_5 : Operation 74 [1/1] (0.00ns)   --->   "%kernel_V_addr = getelementptr [25 x i4]* %kernel_V, i64 0, i64 %zext_ln215_3" [Code/intergerize_convolution.cpp:26]   --->   Operation 74 'getelementptr' 'kernel_V_addr' <Predicate = (!icmp_ln22)> <Delay = 0.00>
+ST_5 : Operation 75 [1/1] (0.00ns)   --->   "%zext_ln26 = zext i8 %y_1 to i16" [Code/intergerize_convolution.cpp:26]   --->   Operation 75 'zext' 'zext_ln26' <Predicate = (!icmp_ln22)> <Delay = 0.00>
+ST_5 : Operation 76 [1/1] (2.14ns)   --->   "%add_ln26 = add i16 %zext_ln22, %zext_ln26" [Code/intergerize_convolution.cpp:26]   --->   Operation 76 'add' 'add_ln26' <Predicate = (!icmp_ln22)> <Delay = 2.14> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 77 [1/1] (0.00ns)   --->   "%zext_ln26_1 = zext i16 %add_ln26 to i64" [Code/intergerize_convolution.cpp:26]   --->   Operation 77 'zext' 'zext_ln26_1' <Predicate = (!icmp_ln22)> <Delay = 0.00>
+ST_5 : Operation 78 [1/1] (0.00ns)   --->   "%input_addr = getelementptr [16384 x i8]* %input_r, i64 0, i64 %zext_ln26_1" [Code/intergerize_convolution.cpp:26]   --->   Operation 78 'getelementptr' 'input_addr' <Predicate = (!icmp_ln22)> <Delay = 0.00>
+ST_5 : Operation 79 [2/2] (3.25ns)   --->   "%input_load = load i8* %input_addr, align 1" [Code/intergerize_convolution.cpp:26]   --->   Operation 79 'load' 'input_load' <Predicate = (!icmp_ln22)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15376> <RAM>
+ST_5 : Operation 80 [2/2] (2.15ns)   --->   "%kernel_V_load = load i4* %kernel_V_addr, align 1" [Code/intergerize_convolution.cpp:26]   --->   Operation 80 'load' 'kernel_V_load' <Predicate = (!icmp_ln22)> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15376> <RAM>
+ST_5 : Operation 81 [1/1] (2.11ns)   --->   "%y_2 = add i8 %y_1, 1" [Code/intergerize_convolution.cpp:27]   --->   Operation 81 'add' 'y_2' <Predicate = (!icmp_ln22)> <Delay = 2.11> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 82 [1/1] (2.11ns)   --->   "%x_1 = add i8 %x_0, 1" [Code/intergerize_convolution.cpp:29]   --->   Operation 82 'add' 'x_1' <Predicate = (icmp_ln22)> <Delay = 2.11> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 83 [1/1] (0.00ns)   --->   "br label %.preheader38" [Code/intergerize_convolution.cpp:20]   --->   Operation 83 'br' <Predicate = (icmp_ln22)> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 3.25>
+ST_6 : Operation 84 [1/2] (3.25ns)   --->   "%input_load = load i8* %input_addr, align 1" [Code/intergerize_convolution.cpp:26]   --->   Operation 84 'load' 'input_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15376> <RAM>
+ST_6 : Operation 85 [1/2] (2.15ns)   --->   "%kernel_V_load = load i4* %kernel_V_addr, align 1" [Code/intergerize_convolution.cpp:26]   --->   Operation 85 'load' 'kernel_V_load' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15376> <RAM>
+
+State 7 <SV = 6> <Delay = 7.18>
+ST_7 : Operation 86 [1/1] (0.00ns)   --->   "%lhs_V = sext i4 %kernel_V_load to i12" [Code/intergerize_convolution.cpp:26]   --->   Operation 86 'sext' 'lhs_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 87 [1/1] (0.00ns)   --->   "%rhs_V = zext i8 %input_load to i12" [Code/intergerize_convolution.cpp:26]   --->   Operation 87 'zext' 'rhs_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 88 [1/1] (3.36ns) (grouped into DSP with root node convolute)   --->   "%ret_V = mul i12 %lhs_V, %rhs_V" [Code/intergerize_convolution.cpp:26]   --->   Operation 88 'mul' 'ret_V' <Predicate = true> <Delay = 3.36> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 7.18> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 89 [1/1] (0.00ns) (grouped into DSP with root node convolute)   --->   "%sext_ln26 = sext i12 %ret_V to i32" [Code/intergerize_convolution.cpp:26]   --->   Operation 89 'sext' 'sext_ln26' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 90 [1/1] (3.82ns) (root node of the DSP)   --->   "%convolute = add i32 %convolute_3, %sext_ln26" [Code/intergerize_convolution.cpp:26]   --->   Operation 90 'add' 'convolute' <Predicate = true> <Delay = 3.82> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 7.18> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 91 [1/1] (0.00ns)   --->   "br label %.preheader" [Code/intergerize_convolution.cpp:22]   --->   Operation 91 'br' <Predicate = true> <Delay = 0.00>
+
+State 8 <SV = 4> <Delay = 6.18>
+ST_8 : Operation 92 [5/6] (6.18ns)   --->   "%tmp = sitofp i32 %convolute_2 to float" [Code/intergerize_convolution.cpp:32]   --->   Operation 92 'sitofp' 'tmp' <Predicate = true> <Delay = 6.18> <Core = "Int2Float">   --->   Core 112 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.18> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 9 <SV = 5> <Delay = 6.18>
+ST_9 : Operation 93 [4/6] (6.18ns)   --->   "%tmp = sitofp i32 %convolute_2 to float" [Code/intergerize_convolution.cpp:32]   --->   Operation 93 'sitofp' 'tmp' <Predicate = true> <Delay = 6.18> <Core = "Int2Float">   --->   Core 112 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.18> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 10 <SV = 6> <Delay = 6.18>
+ST_10 : Operation 94 [3/6] (6.18ns)   --->   "%tmp = sitofp i32 %convolute_2 to float" [Code/intergerize_convolution.cpp:32]   --->   Operation 94 'sitofp' 'tmp' <Predicate = true> <Delay = 6.18> <Core = "Int2Float">   --->   Core 112 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.18> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 11 <SV = 7> <Delay = 6.18>
+ST_11 : Operation 95 [2/6] (6.18ns)   --->   "%tmp = sitofp i32 %convolute_2 to float" [Code/intergerize_convolution.cpp:32]   --->   Operation 95 'sitofp' 'tmp' <Predicate = true> <Delay = 6.18> <Core = "Int2Float">   --->   Core 112 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.18> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 12 <SV = 8> <Delay = 6.18>
+ST_12 : Operation 96 [1/6] (6.18ns)   --->   "%tmp = sitofp i32 %convolute_2 to float" [Code/intergerize_convolution.cpp:32]   --->   Operation 96 'sitofp' 'tmp' <Predicate = true> <Delay = 6.18> <Core = "Int2Float">   --->   Core 112 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.18> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 13 <SV = 9> <Delay = 5.78>
+ST_13 : Operation 97 [4/4] (5.78ns)   --->   "%x_assign = fmul float %tmp, %alpha_kernel_read" [Code/intergerize_convolution.cpp:32]   --->   Operation 97 'fmul' 'x_assign' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 10> <Delay = 5.78>
+ST_14 : Operation 98 [3/4] (5.78ns)   --->   "%x_assign = fmul float %tmp, %alpha_kernel_read" [Code/intergerize_convolution.cpp:32]   --->   Operation 98 'fmul' 'x_assign' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 11> <Delay = 5.78>
+ST_15 : Operation 99 [2/4] (5.78ns)   --->   "%x_assign = fmul float %tmp, %alpha_kernel_read" [Code/intergerize_convolution.cpp:32]   --->   Operation 99 'fmul' 'x_assign' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 12> <Delay = 7.89>
+ST_16 : Operation 100 [1/4] (5.78ns)   --->   "%x_assign = fmul float %tmp, %alpha_kernel_read" [Code/intergerize_convolution.cpp:32]   --->   Operation 100 'fmul' 'x_assign' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 101 [1/1] (0.00ns)   --->   "%p_Val2_s = bitcast float %x_assign to i32" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:310->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:319->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:66->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32]   --->   Operation 101 'bitcast' 'p_Val2_s' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 102 [1/1] (0.00ns)   --->   "%tmp_V = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %p_Val2_s, i32 23, i32 30) nounwind" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:317->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:319->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:66->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32]   --->   Operation 102 'partselect' 'tmp_V' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 103 [1/1] (0.00ns)   --->   "%tmp_V_1 = trunc i32 %p_Val2_s to i23" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:318->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:319->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:66->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32]   --->   Operation 103 'trunc' 'tmp_V_1' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 104 [1/1] (0.00ns)   --->   "%zext_ln339 = zext i8 %tmp_V to i9" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:339->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32]   --->   Operation 104 'zext' 'zext_ln339' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 105 [1/1] (2.11ns)   --->   "%add_ln339 = add i9 -127, %zext_ln339" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:339->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32]   --->   Operation 105 'add' 'add_ln339' <Predicate = true> <Delay = 2.11> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 106 [1/1] (0.00ns)   --->   "%isNeg = call i1 @_ssdm_op_BitSelect.i1.i9.i32(i9 %add_ln339, i32 8)" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32]   --->   Operation 106 'bitselect' 'isNeg' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 107 [1/1] (2.11ns)   --->   "%sub_ln1311 = sub i8 127, %tmp_V" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32]   --->   Operation 107 'sub' 'sub_ln1311' <Predicate = true> <Delay = 2.11> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 13> <Delay = 8.42>
+ST_17 : Operation 108 [1/1] (0.00ns)   --->   "%mantissa_V = call i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1(i1 true, i23 %tmp_V_1, i1 false)" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:68->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32]   --->   Operation 108 'bitconcatenate' 'mantissa_V' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 109 [1/1] (0.00ns) (grouped into LUT with out node val_V)   --->   "%zext_ln682 = zext i25 %mantissa_V to i55" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:68->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32]   --->   Operation 109 'zext' 'zext_ln682' <Predicate = (!isNeg)> <Delay = 0.00>
+ST_17 : Operation 110 [1/1] (0.00ns)   --->   "%sext_ln1311 = sext i8 %sub_ln1311 to i9" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32]   --->   Operation 110 'sext' 'sext_ln1311' <Predicate = (isNeg)> <Delay = 0.00>
+ST_17 : Operation 111 [1/1] (1.08ns)   --->   "%ush = select i1 %isNeg, i9 %sext_ln1311, i9 %add_ln339" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32]   --->   Operation 111 'select' 'ush' <Predicate = true> <Delay = 1.08> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.04> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_17 : Operation 112 [1/1] (0.00ns) (grouped into LUT with out node val_V)   --->   "%sext_ln1311_1 = sext i9 %ush to i32" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32]   --->   Operation 112 'sext' 'sext_ln1311_1' <Predicate = (!isNeg)> <Delay = 0.00>
+ST_17 : Operation 113 [1/1] (0.00ns) (grouped into LUT with out node val_V)   --->   "%sext_ln1311_2 = sext i9 %ush to i25" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32]   --->   Operation 113 'sext' 'sext_ln1311_2' <Predicate = (isNeg)> <Delay = 0.00>
+ST_17 : Operation 114 [1/1] (0.00ns) (grouped into LUT with out node val_V)   --->   "%zext_ln1287 = zext i32 %sext_ln1311_1 to i55" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32]   --->   Operation 114 'zext' 'zext_ln1287' <Predicate = (!isNeg)> <Delay = 0.00>
+ST_17 : Operation 115 [1/1] (0.00ns) (grouped into LUT with out node val_V)   --->   "%r_V = lshr i25 %mantissa_V, %sext_ln1311_2" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32]   --->   Operation 115 'lshr' 'r_V' <Predicate = (isNeg)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 4.08> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 116 [1/1] (0.00ns) (grouped into LUT with out node val_V)   --->   "%r_V_1 = shl i55 %zext_ln682, %zext_ln1287" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32]   --->   Operation 116 'shl' 'r_V_1' <Predicate = (!isNeg)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 4.08> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 117 [1/1] (0.00ns) (grouped into LUT with out node val_V)   --->   "%tmp_8 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %r_V, i32 24)" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:74->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32]   --->   Operation 117 'bitselect' 'tmp_8' <Predicate = (isNeg)> <Delay = 0.00>
+ST_17 : Operation 118 [1/1] (0.00ns) (grouped into LUT with out node val_V)   --->   "%zext_ln662 = zext i1 %tmp_8 to i8" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:74->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32]   --->   Operation 118 'zext' 'zext_ln662' <Predicate = (isNeg)> <Delay = 0.00>
+ST_17 : Operation 119 [1/1] (0.00ns) (grouped into LUT with out node val_V)   --->   "%tmp_4 = call i8 @_ssdm_op_PartSelect.i8.i55.i32.i32(i55 %r_V_1, i32 24, i32 31)" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:74->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32]   --->   Operation 119 'partselect' 'tmp_4' <Predicate = (!isNeg)> <Delay = 0.00>
+ST_17 : Operation 120 [1/1] (4.08ns) (out node of the LUT)   --->   "%val_V = select i1 %isNeg, i8 %zext_ln662, i8 %tmp_4" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32]   --->   Operation 120 'select' 'val_V' <Predicate = true> <Delay = 4.08> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.04> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_17 : Operation 121 [1/1] (0.00ns)   --->   "%sext_ln32 = sext i15 %add_ln32 to i64" [Code/intergerize_convolution.cpp:32]   --->   Operation 121 'sext' 'sext_ln32' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 122 [1/1] (0.00ns)   --->   "%output_addr = getelementptr [15376 x i8]* %output_r, i64 0, i64 %sext_ln32" [Code/intergerize_convolution.cpp:32]   --->   Operation 122 'getelementptr' 'output_addr' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 123 [1/1] (3.25ns)   --->   "store i8 %val_V, i8* %output_addr, align 1" [Code/intergerize_convolution.cpp:32]   --->   Operation 123 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15376> <RAM>
+ST_17 : Operation 124 [1/1] (0.00ns)   --->   "br label %.preheader39" [Code/intergerize_convolution.cpp:13]   --->   Operation 124 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.66ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', Code/intergerize_convolution.cpp:11) [14]  (1.66 ns)
+
+ <State 2>: 2.14ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', Code/intergerize_convolution.cpp:11) [14]  (0 ns)
+	'sub' operation ('sub_ln32', Code/intergerize_convolution.cpp:32) [25]  (2.14 ns)
+
+ <State 3>: 2.03ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', Code/intergerize_convolution.cpp:13) [28]  (0 ns)
+	'add' operation ('j', Code/intergerize_convolution.cpp:13) [32]  (2.03 ns)
+
+ <State 4>: 6.18ns
+The critical path consists of the following:
+	'phi' operation ('convolute_2', Code/intergerize_convolution.cpp:26) with incoming values : ('convolute', Code/intergerize_convolution.cpp:26) [37]  (0 ns)
+	'sitofp' operation ('tmp', Code/intergerize_convolution.cpp:32) [82]  (6.18 ns)
+
+ <State 5>: 5.4ns
+The critical path consists of the following:
+	'phi' operation ('y') with incoming values : ('zext_ln17', Code/intergerize_convolution.cpp:17) ('y', Code/intergerize_convolution.cpp:27) [54]  (0 ns)
+	'add' operation ('add_ln26', Code/intergerize_convolution.cpp:26) [66]  (2.14 ns)
+	'getelementptr' operation ('input_addr', Code/intergerize_convolution.cpp:26) [68]  (0 ns)
+	'load' operation ('i_op', Code/intergerize_convolution.cpp:26) on array 'input_r' [69]  (3.26 ns)
+
+ <State 6>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('i_op', Code/intergerize_convolution.cpp:26) on array 'input_r' [69]  (3.26 ns)
+
+ <State 7>: 7.18ns
+The critical path consists of the following:
+	'mul' operation of DSP[75] ('ret.V', Code/intergerize_convolution.cpp:26) [73]  (3.36 ns)
+	'add' operation of DSP[75] ('convolute', Code/intergerize_convolution.cpp:26) [75]  (3.82 ns)
+
+ <State 8>: 6.18ns
+The critical path consists of the following:
+	'sitofp' operation ('tmp', Code/intergerize_convolution.cpp:32) [82]  (6.18 ns)
+
+ <State 9>: 6.18ns
+The critical path consists of the following:
+	'sitofp' operation ('tmp', Code/intergerize_convolution.cpp:32) [82]  (6.18 ns)
+
+ <State 10>: 6.18ns
+The critical path consists of the following:
+	'sitofp' operation ('tmp', Code/intergerize_convolution.cpp:32) [82]  (6.18 ns)
+
+ <State 11>: 6.18ns
+The critical path consists of the following:
+	'sitofp' operation ('tmp', Code/intergerize_convolution.cpp:32) [82]  (6.18 ns)
+
+ <State 12>: 6.18ns
+The critical path consists of the following:
+	'sitofp' operation ('tmp', Code/intergerize_convolution.cpp:32) [82]  (6.18 ns)
+
+ <State 13>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('x', Code/intergerize_convolution.cpp:32) [83]  (5.78 ns)
+
+ <State 14>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('x', Code/intergerize_convolution.cpp:32) [83]  (5.78 ns)
+
+ <State 15>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('x', Code/intergerize_convolution.cpp:32) [83]  (5.78 ns)
+
+ <State 16>: 7.9ns
+The critical path consists of the following:
+	'fmul' operation ('x', Code/intergerize_convolution.cpp:32) [83]  (5.78 ns)
+	'add' operation ('sh', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:339->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32) [90]  (2.12 ns)
+
+ <State 17>: 8.43ns
+The critical path consists of the following:
+	'select' operation ('sh', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32) [94]  (1.08 ns)
+	'lshr' operation ('r.V', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32) [98]  (0 ns)
+	'select' operation ('val.V', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32) [103]  (4.09 ns)
+	'store' operation ('store_ln32', Code/intergerize_convolution.cpp:32) of variable 'val.V', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:71->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:63->Code/intergerize_convolution.cpp:32 on array 'output_r' [108]  (3.26 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

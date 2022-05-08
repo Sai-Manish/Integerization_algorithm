@@ -1,0 +1,5 @@
+   Build using "F:/Vivado/Vivado/2019.1/msys64/mingw64/bin/g++"
+   Compiling apatb_top_module.cpp
+   Compiling intergerize_convolution.cpp_pre.cpp.tb.cpp
+   Compiling integerize_convolution_test.cpp_pre.cpp.tb.cpp
+cosim.tv.mk:61: recipe for target 'obj/integerize_convolution_test.cpp_pre.cpp.tb.o' failed

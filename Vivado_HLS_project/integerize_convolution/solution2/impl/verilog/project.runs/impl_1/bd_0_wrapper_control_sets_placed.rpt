@@ -1,0 +1,96 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Wed Apr 27 12:18:52 2022
+| Host         : LAPTOP-63J97F6G running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file bd_0_wrapper_control_sets_placed.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7a35t
+-----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    18 |
+|    Minimum number of control sets                        |    18 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    43 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    18 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     3 |
+| >= 16              |     7 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             238 |           62 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              72 |           22 |
+| Yes          | No                    | No                     |             158 |           44 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              49 |            8 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+----------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+| Clock Signal |                                         Enable Signal                                        |                                                                  Set/Reset Signal                                                                 | Slice Load Count | Bel Load Count |
++--------------+----------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_NS_fsm10_out                                                         | bd_0_i/hls_inst/inst/x_reg_123                                                                                                                    |                1 |              7 |
+|  ap_clk      | bd_0_i/hls_inst/inst/output_r_we0                                                            | bd_0_i/hls_inst/inst/y_reg_1340                                                                                                                   |                1 |              7 |
+|  ap_clk      | bd_0_i/hls_inst/inst/x_0_reg_158[6]_i_1_n_0                                                  |                                                                                                                                                   |                2 |              7 |
+|  ap_clk      |                                                                                              | bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/STATE_DELAY/i_pipe/state_op[0]   |                2 |              8 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_NS_fsm[5]                                                            |                                                                                                                                                   |                2 |              8 |
+|  ap_clk      | bd_0_i/hls_inst/inst/top_module_mac_mudEe_U3/top_module_mac_mudEe_DSP48_0_U/CEP              |                                                                                                                                                   |                3 |              8 |
+|  ap_clk      | bd_0_i/hls_inst/inst/y_reg_1340                                                              |                                                                                                                                                   |                4 |             12 |
+|  ap_clk      | bd_0_i/hls_inst/inst/top_module_mac_mudEe_U3/top_module_mac_mudEe_DSP48_0_U/ap_CS_fsm_reg[3] |                                                                                                                                                   |                3 |             12 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_state3                                                        |                                                                                                                                                   |                3 |             14 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_state2                                                        |                                                                                                                                                   |                4 |             14 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_NS_fsm[7]                                                            |                                                                                                                                                   |                5 |             14 |
+|  ap_clk      |                                                                                              | ap_rst                                                                                                                                            |                6 |             17 |
+|  ap_clk      |                                                                                              | bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/state_op[0]     |                6 |             22 |
+|  ap_clk      |                                                                                              | bd_0_i/hls_inst/inst/top_module_sitofpcud_U2/top_module_ap_sitofp_4_no_dsp_32_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/EXP/ZERO_DELAY/i_pipe/op_state[0] |                8 |             25 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_state12                                                       |                                                                                                                                                   |                6 |             30 |
+|  ap_clk      | bd_0_i/hls_inst/inst/top_module_mac_mudEe_U3/top_module_mac_mudEe_DSP48_0_U/E[0]             | bd_0_i/hls_inst/inst/top_module_mac_mudEe_U3/top_module_mac_mudEe_DSP48_0_U/SR[0]                                                                 |                6 |             35 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_state16                                                       |                                                                                                                                                   |               12 |             39 |
+|  ap_clk      |                                                                                              |                                                                                                                                                   |               62 |            238 |
++--------------+----------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+

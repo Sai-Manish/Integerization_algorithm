@@ -1,0 +1,516 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Wed Apr 27 12:20:31 2022
+| Host         : LAPTOP-63J97F6G running 64-bit major release  (build 9200)
+| Command      : report_timing -max_paths 10 -file ./report/top_module_timing_paths_routed.rpt
+| Design       : bd_0_wrapper
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+-----------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             3.739ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[0]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.748ns  (logic 2.553ns (44.419%)  route 3.195ns (55.581%))
+  Logic Levels:           2  (LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=520, unset)          0.973     0.973    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/aclk
+    DSP48_X0Y23          DSP48E1                                      r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y23          DSP48E1 (Prop_dsp48e1_CLK_P[30])
+                                                      2.305     3.278 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[30]
+                         net (fo=32, routed)          1.889     5.167    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT[0]
+    SLICE_X9Y65          LUT6 (Prop_lut6_I4_O)        0.124     5.291 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT_REG.NORMAL.exp_op[7]_i_4/O
+                         net (fo=1, routed)           0.808     6.099    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/STATE_DELAY/i_pipe/RESULT_REG.NORMAL.exp_op_reg[1]
+    SLICE_X9Y64          LUT5 (Prop_lut5_I1_O)        0.124     6.223 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/STATE_DELAY/i_pipe/RESULT_REG.NORMAL.exp_op[7]_i_1/O
+                         net (fo=8, routed)           0.498     6.721    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/state_op[0]
+    SLICE_X11Y63         FDRE                                         r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[0]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=520, unset)          0.924    10.924    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/aclk
+    SLICE_X11Y63         FDRE                                         r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[0]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X11Y63         FDRE (Setup_fdre_C_R)       -0.429    10.460    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[0]
+  -------------------------------------------------------------------
+                         required time                         10.460    
+                         arrival time                          -6.721    
+  -------------------------------------------------------------------
+                         slack                                  3.739    
+
+Slack (MET) :             3.739ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[1]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.748ns  (logic 2.553ns (44.419%)  route 3.195ns (55.581%))
+  Logic Levels:           2  (LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=520, unset)          0.973     0.973    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/aclk
+    DSP48_X0Y23          DSP48E1                                      r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y23          DSP48E1 (Prop_dsp48e1_CLK_P[30])
+                                                      2.305     3.278 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[30]
+                         net (fo=32, routed)          1.889     5.167    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT[0]
+    SLICE_X9Y65          LUT6 (Prop_lut6_I4_O)        0.124     5.291 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT_REG.NORMAL.exp_op[7]_i_4/O
+                         net (fo=1, routed)           0.808     6.099    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/STATE_DELAY/i_pipe/RESULT_REG.NORMAL.exp_op_reg[1]
+    SLICE_X9Y64          LUT5 (Prop_lut5_I1_O)        0.124     6.223 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/STATE_DELAY/i_pipe/RESULT_REG.NORMAL.exp_op[7]_i_1/O
+                         net (fo=8, routed)           0.498     6.721    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/state_op[0]
+    SLICE_X11Y63         FDRE                                         r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[1]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=520, unset)          0.924    10.924    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/aclk
+    SLICE_X11Y63         FDRE                                         r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[1]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X11Y63         FDRE (Setup_fdre_C_R)       -0.429    10.460    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[1]
+  -------------------------------------------------------------------
+                         required time                         10.460    
+                         arrival time                          -6.721    
+  -------------------------------------------------------------------
+                         slack                                  3.739    
+
+Slack (MET) :             3.739ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[2]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.748ns  (logic 2.553ns (44.419%)  route 3.195ns (55.581%))
+  Logic Levels:           2  (LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=520, unset)          0.973     0.973    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/aclk
+    DSP48_X0Y23          DSP48E1                                      r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y23          DSP48E1 (Prop_dsp48e1_CLK_P[30])
+                                                      2.305     3.278 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[30]
+                         net (fo=32, routed)          1.889     5.167    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT[0]
+    SLICE_X9Y65          LUT6 (Prop_lut6_I4_O)        0.124     5.291 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT_REG.NORMAL.exp_op[7]_i_4/O
+                         net (fo=1, routed)           0.808     6.099    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/STATE_DELAY/i_pipe/RESULT_REG.NORMAL.exp_op_reg[1]
+    SLICE_X9Y64          LUT5 (Prop_lut5_I1_O)        0.124     6.223 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/STATE_DELAY/i_pipe/RESULT_REG.NORMAL.exp_op[7]_i_1/O
+                         net (fo=8, routed)           0.498     6.721    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/state_op[0]
+    SLICE_X11Y63         FDRE                                         r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[2]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=520, unset)          0.924    10.924    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/aclk
+    SLICE_X11Y63         FDRE                                         r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[2]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X11Y63         FDRE (Setup_fdre_C_R)       -0.429    10.460    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[2]
+  -------------------------------------------------------------------
+                         required time                         10.460    
+                         arrival time                          -6.721    
+  -------------------------------------------------------------------
+                         slack                                  3.739    
+
+Slack (MET) :             3.739ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[3]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.748ns  (logic 2.553ns (44.419%)  route 3.195ns (55.581%))
+  Logic Levels:           2  (LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=520, unset)          0.973     0.973    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/aclk
+    DSP48_X0Y23          DSP48E1                                      r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y23          DSP48E1 (Prop_dsp48e1_CLK_P[30])
+                                                      2.305     3.278 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[30]
+                         net (fo=32, routed)          1.889     5.167    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT[0]
+    SLICE_X9Y65          LUT6 (Prop_lut6_I4_O)        0.124     5.291 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT_REG.NORMAL.exp_op[7]_i_4/O
+                         net (fo=1, routed)           0.808     6.099    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/STATE_DELAY/i_pipe/RESULT_REG.NORMAL.exp_op_reg[1]
+    SLICE_X9Y64          LUT5 (Prop_lut5_I1_O)        0.124     6.223 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/STATE_DELAY/i_pipe/RESULT_REG.NORMAL.exp_op[7]_i_1/O
+                         net (fo=8, routed)           0.498     6.721    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/state_op[0]
+    SLICE_X11Y63         FDRE                                         r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[3]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=520, unset)          0.924    10.924    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/aclk
+    SLICE_X11Y63         FDRE                                         r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[3]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X11Y63         FDRE (Setup_fdre_C_R)       -0.429    10.460    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[3]
+  -------------------------------------------------------------------
+                         required time                         10.460    
+                         arrival time                          -6.721    
+  -------------------------------------------------------------------
+                         slack                                  3.739    
+
+Slack (MET) :             3.740ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.mant_op_reg[13]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.747ns  (logic 2.553ns (44.427%)  route 3.194ns (55.573%))
+  Logic Levels:           2  (LUT3=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=520, unset)          0.973     0.973    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/aclk
+    DSP48_X0Y23          DSP48E1                                      r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y23          DSP48E1 (Prop_dsp48e1_CLK_P[30])
+                                                      2.305     3.278 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[30]
+                         net (fo=32, routed)          1.922     5.200    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT[0]
+    SLICE_X8Y64          LUT3 (Prop_lut3_I1_O)        0.124     5.324 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT_REG.NORMAL.mant_op[21]_i_3/O
+                         net (fo=2, routed)           0.176     5.500    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT_REG.NORMAL.mant_op[21]_i_3_n_0
+    SLICE_X8Y64          LUT6 (Prop_lut6_I1_O)        0.124     5.624 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT_REG.NORMAL.mant_op[21]_i_1/O
+                         net (fo=22, routed)          1.095     6.720    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/state_op[1]
+    SLICE_X13Y61         FDRE                                         r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.mant_op_reg[13]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=520, unset)          0.924    10.924    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/aclk
+    SLICE_X13Y61         FDRE                                         r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.mant_op_reg[13]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X13Y61         FDRE (Setup_fdre_C_R)       -0.429    10.460    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.mant_op_reg[13]
+  -------------------------------------------------------------------
+                         required time                         10.460    
+                         arrival time                          -6.720    
+  -------------------------------------------------------------------
+                         slack                                  3.740    
+
+Slack (MET) :             3.740ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.mant_op_reg[14]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.747ns  (logic 2.553ns (44.427%)  route 3.194ns (55.573%))
+  Logic Levels:           2  (LUT3=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=520, unset)          0.973     0.973    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/aclk
+    DSP48_X0Y23          DSP48E1                                      r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y23          DSP48E1 (Prop_dsp48e1_CLK_P[30])
+                                                      2.305     3.278 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[30]
+                         net (fo=32, routed)          1.922     5.200    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT[0]
+    SLICE_X8Y64          LUT3 (Prop_lut3_I1_O)        0.124     5.324 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT_REG.NORMAL.mant_op[21]_i_3/O
+                         net (fo=2, routed)           0.176     5.500    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT_REG.NORMAL.mant_op[21]_i_3_n_0
+    SLICE_X8Y64          LUT6 (Prop_lut6_I1_O)        0.124     5.624 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT_REG.NORMAL.mant_op[21]_i_1/O
+                         net (fo=22, routed)          1.095     6.720    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/state_op[1]
+    SLICE_X13Y61         FDRE                                         r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.mant_op_reg[14]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=520, unset)          0.924    10.924    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/aclk
+    SLICE_X13Y61         FDRE                                         r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.mant_op_reg[14]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X13Y61         FDRE (Setup_fdre_C_R)       -0.429    10.460    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.mant_op_reg[14]
+  -------------------------------------------------------------------
+                         required time                         10.460    
+                         arrival time                          -6.720    
+  -------------------------------------------------------------------
+                         slack                                  3.740    
+
+Slack (MET) :             3.740ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.mant_op_reg[15]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.747ns  (logic 2.553ns (44.427%)  route 3.194ns (55.573%))
+  Logic Levels:           2  (LUT3=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=520, unset)          0.973     0.973    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/aclk
+    DSP48_X0Y23          DSP48E1                                      r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y23          DSP48E1 (Prop_dsp48e1_CLK_P[30])
+                                                      2.305     3.278 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[30]
+                         net (fo=32, routed)          1.922     5.200    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT[0]
+    SLICE_X8Y64          LUT3 (Prop_lut3_I1_O)        0.124     5.324 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT_REG.NORMAL.mant_op[21]_i_3/O
+                         net (fo=2, routed)           0.176     5.500    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT_REG.NORMAL.mant_op[21]_i_3_n_0
+    SLICE_X8Y64          LUT6 (Prop_lut6_I1_O)        0.124     5.624 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT_REG.NORMAL.mant_op[21]_i_1/O
+                         net (fo=22, routed)          1.095     6.720    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/state_op[1]
+    SLICE_X13Y61         FDRE                                         r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.mant_op_reg[15]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=520, unset)          0.924    10.924    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/aclk
+    SLICE_X13Y61         FDRE                                         r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.mant_op_reg[15]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X13Y61         FDRE (Setup_fdre_C_R)       -0.429    10.460    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.mant_op_reg[15]
+  -------------------------------------------------------------------
+                         required time                         10.460    
+                         arrival time                          -6.720    
+  -------------------------------------------------------------------
+                         slack                                  3.740    
+
+Slack (MET) :             3.880ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[4]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.607ns  (logic 2.553ns (45.535%)  route 3.054ns (54.465%))
+  Logic Levels:           2  (LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=520, unset)          0.973     0.973    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/aclk
+    DSP48_X0Y23          DSP48E1                                      r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y23          DSP48E1 (Prop_dsp48e1_CLK_P[30])
+                                                      2.305     3.278 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[30]
+                         net (fo=32, routed)          1.889     5.167    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT[0]
+    SLICE_X9Y65          LUT6 (Prop_lut6_I4_O)        0.124     5.291 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT_REG.NORMAL.exp_op[7]_i_4/O
+                         net (fo=1, routed)           0.808     6.099    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/STATE_DELAY/i_pipe/RESULT_REG.NORMAL.exp_op_reg[1]
+    SLICE_X9Y64          LUT5 (Prop_lut5_I1_O)        0.124     6.223 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/STATE_DELAY/i_pipe/RESULT_REG.NORMAL.exp_op[7]_i_1/O
+                         net (fo=8, routed)           0.357     6.580    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/state_op[0]
+    SLICE_X11Y64         FDRE                                         r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[4]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=520, unset)          0.924    10.924    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/aclk
+    SLICE_X11Y64         FDRE                                         r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[4]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X11Y64         FDRE (Setup_fdre_C_R)       -0.429    10.460    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[4]
+  -------------------------------------------------------------------
+                         required time                         10.460    
+                         arrival time                          -6.580    
+  -------------------------------------------------------------------
+                         slack                                  3.880    
+
+Slack (MET) :             3.880ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[5]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.607ns  (logic 2.553ns (45.535%)  route 3.054ns (54.465%))
+  Logic Levels:           2  (LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=520, unset)          0.973     0.973    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/aclk
+    DSP48_X0Y23          DSP48E1                                      r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y23          DSP48E1 (Prop_dsp48e1_CLK_P[30])
+                                                      2.305     3.278 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[30]
+                         net (fo=32, routed)          1.889     5.167    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT[0]
+    SLICE_X9Y65          LUT6 (Prop_lut6_I4_O)        0.124     5.291 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT_REG.NORMAL.exp_op[7]_i_4/O
+                         net (fo=1, routed)           0.808     6.099    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/STATE_DELAY/i_pipe/RESULT_REG.NORMAL.exp_op_reg[1]
+    SLICE_X9Y64          LUT5 (Prop_lut5_I1_O)        0.124     6.223 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/STATE_DELAY/i_pipe/RESULT_REG.NORMAL.exp_op[7]_i_1/O
+                         net (fo=8, routed)           0.357     6.580    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/state_op[0]
+    SLICE_X11Y64         FDRE                                         r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[5]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=520, unset)          0.924    10.924    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/aclk
+    SLICE_X11Y64         FDRE                                         r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[5]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X11Y64         FDRE (Setup_fdre_C_R)       -0.429    10.460    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[5]
+  -------------------------------------------------------------------
+                         required time                         10.460    
+                         arrival time                          -6.580    
+  -------------------------------------------------------------------
+                         slack                                  3.880    
+
+Slack (MET) :             3.880ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[6]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.607ns  (logic 2.553ns (45.535%)  route 3.054ns (54.465%))
+  Logic Levels:           2  (LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=520, unset)          0.973     0.973    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/aclk
+    DSP48_X0Y23          DSP48E1                                      r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y23          DSP48E1 (Prop_dsp48e1_CLK_P[30])
+                                                      2.305     3.278 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[30]
+                         net (fo=32, routed)          1.889     5.167    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT[0]
+    SLICE_X9Y65          LUT6 (Prop_lut6_I4_O)        0.124     5.291 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/SIG_DELAY/i_pipe/RESULT_REG.NORMAL.exp_op[7]_i_4/O
+                         net (fo=1, routed)           0.808     6.099    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/STATE_DELAY/i_pipe/RESULT_REG.NORMAL.exp_op_reg[1]
+    SLICE_X9Y64          LUT5 (Prop_lut5_I1_O)        0.124     6.223 r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.EXP/STATE_DELAY/i_pipe/RESULT_REG.NORMAL.exp_op[7]_i_1/O
+                         net (fo=8, routed)           0.357     6.580    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/state_op[0]
+    SLICE_X11Y64         FDRE                                         r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[6]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=520, unset)          0.924    10.924    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/aclk
+    SLICE_X11Y64         FDRE                                         r  bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[6]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X11Y64         FDRE (Setup_fdre_C_R)       -0.429    10.460    bd_0_i/hls_inst/inst/top_module_fmul_3bkb_U1/top_module_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[6]
+  -------------------------------------------------------------------
+                         required time                         10.460    
+                         arrival time                          -6.580    
+  -------------------------------------------------------------------
+                         slack                                  3.880    
+
+
+
+

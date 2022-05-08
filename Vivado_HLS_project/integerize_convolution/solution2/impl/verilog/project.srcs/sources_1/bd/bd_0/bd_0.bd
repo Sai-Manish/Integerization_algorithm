@@ -1,0 +1,269 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x52A8727A84F730A2",
+      "device": "xc7a35tcpg236-1",
+      "name": "bd_0",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "hls_inst": ""
+    },
+    "interface_ports": {
+      "ap_ctrl": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:acc_handshake_rtl:1.0"
+      }
+    },
+    "ports": {
+      "alpha_kernel": {
+        "type": "data",
+        "direction": "I",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "ap_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "ap_rst",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "bd_0_ap_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000.0"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "ap_return": {
+        "type": "data",
+        "direction": "O",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "ap_rst": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "input_r_address0": {
+        "type": "data",
+        "direction": "O",
+        "left": "13",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "input_r_ce0": {
+        "direction": "O"
+      },
+      "input_r_q0": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_V_address0": {
+        "type": "data",
+        "direction": "O",
+        "left": "4",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_V_ce0": {
+        "direction": "O"
+      },
+      "kernel_V_q0": {
+        "type": "data",
+        "direction": "I",
+        "left": "3",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "output_r_address0": {
+        "type": "data",
+        "direction": "O",
+        "left": "13",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "output_r_ce0": {
+        "direction": "O"
+      },
+      "output_r_d0": {
+        "type": "data",
+        "direction": "O",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "output_r_we0": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "hls_inst": {
+        "vlnv": "xilinx.com:hls:top_module:0.0",
+        "xci_name": "bd_0_hls_inst_0"
+      }
+    },
+    "interface_nets": {
+      "ap_ctrl_0_1": {
+        "interface_ports": [
+          "ap_ctrl",
+          "hls_inst/ap_ctrl"
+        ]
+      }
+    },
+    "nets": {
+      "alpha_kernel_0_1": {
+        "ports": [
+          "alpha_kernel",
+          "hls_inst/alpha_kernel"
+        ]
+      },
+      "ap_clk_0_1": {
+        "ports": [
+          "ap_clk",
+          "hls_inst/ap_clk"
+        ]
+      },
+      "hls_inst_ap_return": {
+        "ports": [
+          "hls_inst/ap_return",
+          "ap_return"
+        ]
+      },
+      "ap_rst_0_1": {
+        "ports": [
+          "ap_rst",
+          "hls_inst/ap_rst"
+        ]
+      },
+      "hls_inst_input_r_address0": {
+        "ports": [
+          "hls_inst/input_r_address0",
+          "input_r_address0"
+        ]
+      },
+      "hls_inst_input_r_ce0": {
+        "ports": [
+          "hls_inst/input_r_ce0",
+          "input_r_ce0"
+        ]
+      },
+      "input_r_q0_0_1": {
+        "ports": [
+          "input_r_q0",
+          "hls_inst/input_r_q0"
+        ]
+      },
+      "hls_inst_kernel_V_address0": {
+        "ports": [
+          "hls_inst/kernel_V_address0",
+          "kernel_V_address0"
+        ]
+      },
+      "hls_inst_kernel_V_ce0": {
+        "ports": [
+          "hls_inst/kernel_V_ce0",
+          "kernel_V_ce0"
+        ]
+      },
+      "kernel_V_q0_0_1": {
+        "ports": [
+          "kernel_V_q0",
+          "hls_inst/kernel_V_q0"
+        ]
+      },
+      "hls_inst_output_r_address0": {
+        "ports": [
+          "hls_inst/output_r_address0",
+          "output_r_address0"
+        ]
+      },
+      "hls_inst_output_r_ce0": {
+        "ports": [
+          "hls_inst/output_r_ce0",
+          "output_r_ce0"
+        ]
+      },
+      "hls_inst_output_r_d0": {
+        "ports": [
+          "hls_inst/output_r_d0",
+          "output_r_d0"
+        ]
+      },
+      "hls_inst_output_r_we0": {
+        "ports": [
+          "hls_inst/output_r_we0",
+          "output_r_we0"
+        ]
+      }
+    }
+  }
+}

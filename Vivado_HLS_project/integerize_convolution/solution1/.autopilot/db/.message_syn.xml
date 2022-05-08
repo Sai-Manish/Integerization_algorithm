@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_631" tag="SCHEDULE" content="Option &apos;relax_ii_for_timing&apos; is enabled, will increase II to preserve clock frequency constraints."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;Code/intergerize_convolution.cpp&apos; ..."/>
+	<Message severity="WARNING" prefix="[HLS 200-40]" key="HLS_40_1378" tag="" content="In file included from Code/intergerize_convolution.cpp:1:
+In file included from Code/integerize_convolution.h:14:
+F:/Vivado/Vivado/2019.1/common/technology/autopilot\hls_opencv.h:300:2: error: hls_opencv.h is not intended to be included in design source files, please include hls_opencv.h only in design testbench.
+#error hls_opencv.h is not intended to be included in design source files, please include hls_opencv.h only in design testbench.
+ ^
+1 error generated."/>
+</Messages>
