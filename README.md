@@ -1,2 +1,2 @@
 # Integerization_algorithm
-This My RE work on topic Intergerization under professor Madhav Rao. 
+This My semester 8 project on topic Intergerization under prof Dr.Madhav Rao. 
